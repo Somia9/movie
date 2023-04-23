@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+body
+{
+  background-color: #131722;
+  color: #fff;
+  font-family: 'Montserrat Alternates', sans-serif !important;
+
+}
+a
+{
+cursor: pointer;
+text-decoration: none;
+}
+
+
+.brdr
+{
+  background-color: #a8a8a83d;
+  height: 1px;
+  // bg-light:#24baef;
+  // scound_font_color:#949cb0
+}
+.scound_font_color{
+color: #24baef;
+}

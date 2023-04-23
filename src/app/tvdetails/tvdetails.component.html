@@ -1,0 +1,21 @@
+<div class="container ">
+  <div class="row py-5">
+    <div class="col-md-4 py-5">
+      <img class="w-100" [src]="imgPerfix+tvDetails.poster_path" alt="">
+   </div>
+   <div class="col-md-6 px-3 py-5 ">
+    <h2 class="scound_font_color fw-bolder">{{tvDetails.name}}</h2>
+    <ul *ngFor="let gener of tvDetails.genres" class="d-inline-flex ps-0 mt-3" >
+      <li class="list-group-item bg-info p-1 px-2 rounded m-2">{{gener.name}}</li>
+    </ul>
+
+    <p class=" fs-6">Vote : {{tvDetails.vote_average}}</p>
+    <p class=" fs-6">Vote Count :  {{tvDetails.vote_count}}</p>
+    <p class=" fs-6">popularity :  {{tvDetails.popularity}}</p>
+    <p class=" fs-6">Release Date :  {{tvDetails.release_date}}</p>
+    <p class="text-muted mt-4 lead">{{tvDetails.overview}}</p>
+
+   </div>
+  </div>
+
+  </div>

@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg navbar-dark  bg-transparent position-fixed w-100">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bolder " routerLink="">Noxe</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-2">
+
+        <li class="nav-item">
+          <a *ngIf="islogin" class="nav-link" routerLink="home">Home</a>
+        </li>
+        <li *ngIf="islogin" class="nav-item">
+          <a class="nav-link" routerLink="movies">Movies</a>
+        </li>
+        <li *ngIf="islogin" class="nav-item">
+          <a class="nav-link" routerLink="tvshow">Tvshow</a>
+        </li>
+        <li *ngIf="islogin" class="nav-item">
+          <a class="nav-link" routerLink="people">People</a>
+        </li>
+        <li *ngIf="islogin" class="nav-item">
+          <a class="nav-link" routerLink="about">About</a>
+        </li>
+
+
+      </ul>
+
+
+<div class="ms-0 d-flex">
+  <!-- <form class="d-flex mx-3">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+     <button class="btn btn-outline-success" type="submit">Search</button>
+  </form> -->
+  <ul class="navbar-nav  mb-2 mb-lg-0 brands">
+
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fa-brands fa-facebook text-white"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">
+        <i class="fa-brands fa-twitter text-white"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" >
+        <i class="fa-brands fa-instagram text-white"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.youtube.com/">
+        <i class="fa-brands fa-youtube text-white"></i></a>
+    </li>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
+
+      <li *ngIf="!islogin" class="nav-item">
+        <a class="nav-link" routerLink="registration">Register</a>
+      </li>
+      <li *ngIf="!islogin" class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+
+      <li class="nav-item dropdown mx-2 " *ngIf="islogin">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{userInfo.first_name}}
+        </a>
+        <ul class="dropdown-menu bg-dark">
+          <li><a class="dropdown-item text-white" routerLink="/setting" >Setting</a></li>
+          <li><a class="dropdown-item text-white" routerLink="setting/profile"  >Profile</a></li>
+          <li><hr class="dropdown-divider bg-white"></li>
+          <li><a class="dropdown-item text-white" routerLink="setting/privacy" > Privacy</a></li>
+        </ul>
+      </li>
+
+      <li *ngIf="islogin" (click)="logOut()" class="nav-item">
+        <a class="nav-link" >LogOut</a>
+      </li>
+
+      <!-- <li *ngIf="islogin"  class="nav-item  rounded-pill mx-2 ">
+        <a class="nav-link h6"  >Welcome {{userInfo.first_name}} </a>
+      </li> -->
+
+
+
+    </ul>
+  </ul>
+</div>
+
+
+
+    </div>
+  </div>
+</nav>

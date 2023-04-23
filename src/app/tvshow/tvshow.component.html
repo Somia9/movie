@@ -1,0 +1,40 @@
+<div class="container py-5 ">
+  <label for=""  class="pt-5 pb-2 fs-5">Search :</label>
+  <input type="text"  class="form-control"  placeholder="search by title">
+  <div class="mt-5 ">
+  <nav aria-label="Page navigation example  ">
+    <ul class="pagination justify-content-end  ">
+
+      <li *ngFor="let page of pages"  class="page-item " ><a (click)="test(page)" class="page-link bg-transparent text-white"  >{{page}}</a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+<div class="row ">
+  <div *ngFor="let tv of trendingTv" class="d-inline-flex  movie my-5">
+
+    <div class="col-md-4 ">
+      <a [routerLink]="['/tvDetails',tv.id]">
+      <img class="w-100 img-fluide" [src]="imgPerfix+tv.poster_path" alt="">
+      </a>
+    </div>
+    <div class="col-md-8  px-5 ">
+      <div class="">
+        <h4 class="scound_font_color fw-bolder mb-5">{{tv.name}}</h4>
+        <p>Release Date : {{tv.release_date}}</p>
+        <p>Original Language : {{tv.original_language.toUpperCase()}}</p>
+        <p>Original Country : {{tv.original_language.toUpperCase()}}</p>
+        <p class="lead text-muted mt-5"> {{tv.overview}}</p>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+ </div>

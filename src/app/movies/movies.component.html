@@ -1,0 +1,53 @@
+<div class="container py-5 ">
+  <label for=""  class="pt-5 pb-2 fs-5">Search :</label>
+  <input type="text" [(ngModel)]="term" class="form-control"  placeholder="search by title">
+  <div class="mt-5 ">
+  <nav aria-label="Page navigation example  ">
+    <ul class="pagination justify-content-end  ">
+
+      <li class="page-item " *ngFor="let page of pages" (click)="test(page)" ><a class="page-link bg-transparent text-white"  >{{page}}</a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+<div class="row ">
+  <div *ngFor="let movie of trendingMovies|search:term" class="d-inline-flex  movie my-5">
+
+    <div class="col-md-4 ">
+      <a [routerLink]="['/movieDetails',movie.id]">
+      <img class="w-100 img-fluide" [src]="imgPerfix+movie.poster_path" alt="">
+      </a>
+    </div>
+    <div class="col-md-8  px-5 ">
+      <div class="">
+        <h4 class="scound_font_color fw-bolder mb-5">{{movie.title}}</h4>
+        <p>Release Date : {{movie.release_date}}</p>
+        <p>Original Language : {{movie.original_language}}</p>
+        <p>Adult : {{movie.adult}}</p>
+        <p class="lead text-muted mt-5"> {{movie.overview}}</p>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
